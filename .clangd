@@ -1,0 +1,18 @@
+CompileFlags:
+  Add:
+    - "-I/home/shiwen/env/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/include/torch/csrc/api/include"
+    - "-I/home/shiwen/env/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/include/"
+    - "--cuda-path=/usr/local/cuda-12.6"  # 指定 CUDA 路径
+    - "-Wno-unknown-warning-option"  # 忽略未知参数警告
+    - "--cuda-gpu-arch=sm_86"        # 替换为你的实际 GPU 架构（如 sm_80）
+
+  Remove:
+    # 移除 NVCC 特有参数（Clangd 无法识别）
+    - "-forward-unknown-to-host-compiler"
+    - "--options-file"
+    - "-Xcudafe"
+    - "--diag_suppress=*"            # 通配符移除所有 diag_suppress 参数
+    - "--expt-relaxed-constexpr"
+    - "--expt-extended-lambda"
+    - "-Xcompiler=-fPIC"
+    - "-gencode"
