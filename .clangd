@@ -1,7 +1,7 @@
 CompileFlags:
   Add:
-    - "-I/home/shiwen/env/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/include/torch/csrc/api/include"
-    - "-I/home/shiwen/env/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/include/"
+    - "-I/home/siwen/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/include/torch/csrc/api/include"
+    - "-I/home/siwen/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/include/"
     - "--cuda-path=/usr/local/cuda-12.6"  # 指定 CUDA 路径
     - "-Wno-unknown-warning-option"  # 忽略未知参数警告
     - "--cuda-gpu-arch=sm_86"        # 替换为你的实际 GPU 架构（如 sm_80）

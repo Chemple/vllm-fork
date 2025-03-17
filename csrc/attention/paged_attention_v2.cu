@@ -27,7 +27,7 @@
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
-#define DIVIDE_ROUND_UP(a, b) (((a) + (b) - 1) / (b))
+#define DIVIDE_ROUND_UP(a, b) (((a) + (b)-1) / (b))
 
 #define LAUNCH_PAGED_ATTENTION_V2(HEAD_SIZE)                                   \
   vllm::paged_attention_v2_kernel<T, CACHE_T, HEAD_SIZE, BLOCK_SIZE,           \

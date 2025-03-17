@@ -1,4 +1,4 @@
-MAX_JOBS=64 \
+MAX_JOBS=32 \
 CMAKE_BUILD_TYPE=Debug \
 VERBOSE=1 \
 CUDA_HOME=/usr/local/cuda-12.6 \
